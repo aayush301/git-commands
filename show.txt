@@ -1,0 +1,5 @@
+git show	// to show the changes between last two commits
+			// same as git show HEAD
+			// same as git diff HEAD^ HEAD
+
+git show <commit> // to show the changes between <commit> and its parent

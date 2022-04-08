@@ -1,0 +1,10 @@
+git reset --soft <commit>
+		// resets the current branch head to <commit>. Does not touch the staging index or the working tree at all.
+
+git reset <commit> OR git reset --mixed <commit>
+		// resets the current branch head to <commit>. Resets the index but not the working tree.
+
+git reset --hard <commit>
+		// resets the current branch head to <commit>. Resets the index and working tree.
+
+<commit> defaults to HEAD in all forms.

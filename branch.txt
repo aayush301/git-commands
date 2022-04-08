@@ -1,0 +1,9 @@
+git branch xyz			// will create new branch xyz
+git branch				// will list all non-remote branches
+git branch -r			// will list all remote branches
+git branch --all		// will list all branches (non-remote + remote)
+git branch -d xyz		// will delete branch (you have to be in other branch)
+
+git checkout xyz		// switch to branch xyz
+git checkout -b xyz		// causes a new branch to be created and then checked out.
+git merge xyz			// will merge xyz branch into current branch.

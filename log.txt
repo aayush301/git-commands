@@ -1,0 +1,11 @@
+To view the history of commits
+
+git log
+git log	<branch>		// logs the commits for only <branch>
+git log -5				// limit the no. of commits
+git commit --oneline	// condenses each commit to a single line
+git log -p				// display full diff of each commit
+git log --graph			// Draw a text-based graphical representation of the commit history on the left hand side of the output.
+git log --all --graph 	// Draw graph having commits of all branches.
+git log --all --oneline --graph 	// Draw graph having commits of all branches in one line each.
+git log --author="<pattern>"	// Search for commits by a particular author.

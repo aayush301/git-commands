@@ -1,0 +1,9 @@
+Commit creates a checkpoint in repository.
+We should always include a message when we commit.
+
+git commit -m "updated files"
+
+git commit -a -m "updated files"
+	// -a will tell the command to automatically stage and then commit files that have been
+	// modified and deleted in working tree (by doing git add and git rm and then commit),
+	// but new files you have not told Git about are not affected.

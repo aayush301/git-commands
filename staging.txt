@@ -1,0 +1,14 @@
+Staged files are files that are ready to be committed to the repository.
+Staged files are added into staging index.
+The "staging index" holds a snapshot of the content of the working directory,
+	and it is this snapshot that is taken as the contents of the next commit.
+	Thus after making any changes to the working directory, and before running the commit command,
+	you must use the add command to add any new or modified files to the index.
+
+
+
+git add file.txt						// To stage a file
+git add --all  OR  git add -A			// To stage all files
+git add -i  OR  git add --interactive	// Add modified contents in the working tree interactively to the staging index.
+
+

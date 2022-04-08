@@ -1,0 +1,43 @@
+3 types of branches:
+1. local branches (stored locally) (e.g. main)
+2. remote branches (stored at remote) (e.g. main)
+3. local copies of remote branches (stored at locally) (e.g. origin/main)
+
+For example, if at the remote, we have main branch and x branch, then locally, along with local main branch and local x branch, we also have origin/main branch and origin/x branch.
+These branches (type 3) get updated at the time of pulling/pushing only and they convey the info. about latest commits pushed/pulled.
+
+Suppose that currently the local main branch and remote main branch are at sync.
+Now, consider 3 cases:
+
+Case 1: We make a commit on local main branch.
+In this case, the local main branch gets updated to point to the new commit.
+But, neither the local origin/main branch nor the remote main branch gets updated.
+However, when we push the main branch to origin, both the local origin/main branch and the remote main branch gets updated to point to the new commit.
+
+
+Case 2: The remote main branch gets a new commit.
+In this case, the remote main branch gets updated to point to new commit.
+But, neither the local main branch nor the local origin/main branch gets updated.
+However, when we pull the main branch from origin, both the local main branch and the local origin/main branch gets updated to point to the new commit.
+
+
+Case 3: We make a commit (say c1) on local main branch and we also make some other commit (say c2) on remote main branch.
+In this case, the local main branch gets updated to point to commit c1, the remote main branch gets updated to point to commit c2.
+But, local origin/main branch doesn't get updated.
+
+Now, pushing or pulling require merging. It may cause merge conflicts which may be needed to be resolved.
+Hence, it is safer to use git fetch here.
+
+First use [git fetch origin] command which will just update local copy of remote branch (i.e. origin/main). This means that local origin/main branch will point to commit c2.
+Now, the local main branch will point to commit c1, the local origin/main branch to commit c2, and the remote main branch to commit c2.
+Now, we require to merge local origin/main branch into local main branch.
+We can run merge command to merge here.
+Note that we could also run git pull command instead of fetch then merge, since fetching + merging is equivalent to pulling, but then if any merge conflicts arise, then we need to resolve the conflicts as well.
+git pull origin main = git fetch origin + git merge main origin/main
+
+Now, our local main branch is pointing to merged commit (say c3) and local origin/main branch and remote main branch are pointing to commit c2.
+Now, we can push the main branch which will update both the local origin/main branch and remote main branch to point to commit c3.
+Now, all the 3  branches (local main, local origin/main and remote main branch) are at sync with each other.
+
+
+

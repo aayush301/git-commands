@@ -1,0 +1,27 @@
+Configure Git
+git config --global user.name "xyz"
+git config --global user.email "xyz@gmail.com"
+git config --global --edit
+
+Initialize Git
+git init
+
+git status		// check the status of all files.
+
+Files in Git Repository Folder can be in one of 2 states:
+1. Tracked: Files that Git knows about and are added to repository.
+2. Untracked: files that are in working directory, but not added to repository.
+
+
+Git = Working directory(or working tree) + Staging index + Repository
+
+
+
+// help
+git <command-name> -help	// see all available options for specific command
+git <command-name> --help	// opens Git Manual page for specific command
+git help --all				// list all possible commands
+
+
+Use Shift+G to jump to the end of the list.
+Use q to exit the view.

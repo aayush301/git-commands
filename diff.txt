@@ -1,0 +1,9 @@
+git diff			// show changes between working tree and staging index.
+git diff HEAD		// show changes between working tree and last commit.  (What we would be committing if we run git commit -a)
+git diff --cached	// show changes between staging index and last commit. (What we would be committing if we run git commit)
+git diff --staged	// same as above
+
+git diff <commit1> <commit2>	// show changes between the two commits
+git diff HEAD^ HEAD
+					// compare the version before the last commit and the last commit
+					// (same as git show)

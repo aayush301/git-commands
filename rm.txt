@@ -1,0 +1,6 @@
+Remove files from the staging index, or from both working tree and the index.
+It will remove only those files that are known to git.
+
+git rm file.txt		// remove file from both working tree and index (index should be up to date)
+git rm --cached file.txt	// unstage and remove paths only from index.
+

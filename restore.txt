@@ -1,0 +1,17 @@
+Restore specified paths in the working tree with some contents from a restore source.
+
+git restore --staged <file_name>	
+		// restore file in staging index to match last commit.
+		// This is same as git reset
+
+git restore <file_name>	
+		// restore file in working directory to match the staging index.
+
+git restore --staged --worktree <file_name>
+		// restore file in both the working tree and the index directly to match last commit.
+		// This is same as git reset --hard
+
+git restore --source <source> <file_name>
+		// restore file in working directory to match the contents of source.
+		// Ex. of source: 6ba66ca, Head~2, etc.
+		

@@ -1,0 +1,15 @@
+Main function: Switch branches or restore working tree files.
+
+git checkout <branch>
+		// HEAD now points to <branch>. Local modifications to the files in the working tree are kept, so that they can be committed to the <branch>.
+
+git checkout -b <new_branch>
+		// It causes a new branch to be created and then checked out, if it doesn't exist.
+		// If it exists, then error occurs.
+
+git checkout -B <new_branch>
+		// <new_branch> is created if it doesn’t exist; otherwise, it is reset.
+		// Eq. of: git branch -f <branch>; git checkout <branch>;
+
+git checkout <commit>
+		// Head gets detached to commit
